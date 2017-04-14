@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Form application</title>
+    <link rel="stylesheet" href="master.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .navBg {
+	       background: #22465e;
+        }
+        .white {
+            color: #fff;
+        }
+        .classh4 { color: aqua; text-align: center;}    
+        
+        img { height: 42px; float: left; line-height: 30px;}
+        .padding { padding: 10px;}
+        span { font-weight: bold;}
+        
+        label { line-height: 1.5;}
+        
+        @-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
+        
+        
+        /* Small devices - Tablets (>768px) */
+            @media (min-width: 768px) {}
+            @media screen and (min-width: 768px) {}
+            @media (min-width: 768px) and (max-width: 991px) {}
+
+        /* Medium devices - Desktops (>992px) */
+            @media (min-width: 992px) {}
+
+        /* Large devices - Desktops (>1200px) */
+            @media (min-width: 1200px) {}
+        
+        
+        input[type=radio] {
+            display:none; 
+            margin:10px;
+        }
+
+        /*
+          Change the look'n'feel of labels (which are adjacent to radiobuttons).
+          Add some margin, padding to label
+        */
+        
+        input[type=radio] + label {
+            display:inline-block;
+            margin:2px;
+            padding: 4px 12px;
+            background-color: #EEF1F3;
+            border-color: #EEF1F3;
+        }
+        /*
+         Change background color for label next to checked radio button
+         to make it look like highlighted button
+        */
+        input[type=radio]:checked + label { 
+            background-image: none;
+            background-color:#2E9DE6;
+            color: #fff;
+        }
+        
+    </style>
+    <script src="jquery.js"></script> 
+    
+</head>
+
+<body>
+     <nav class="navbar navbar-default navbar-fixed-top navBg " role="navigation">
+       
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <img src="images/ca-150.png" width="55" height="42"  />
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <h4 class="classh4">Sample Form</h4>
+            <!-- /.navbar-collapse -->
+        
+        <!-- /.container <h1>banner text</h1> -->
+         
+    </nav>
+    <br>
+    
+<div class="container">  
+    <div class="rows">
+  		<form id="contact" action="" method="post">
+    		<h3>Connect With Us</h3><br>
+            
+           
+              <div class="panel panel-info">
+                <div class="panel-heading"> <h4><b>Personal Information</b></h4></div>
+                <div class="panel-body">
+                    <section>
+                         <fieldset>
+                            <label>Name</label>
+                            <input placeholder="Name" name="Name" type="text" tabindex="1" required autofocus>
+                         </fieldset>
+
+                         <fieldset>
+                            <label>Order Date</label>
+                            <input placeholder="yyyy/mm/dd" name="training_date" type="tel" tabindex="3" required>
+                         </fieldset> 
+                    </section>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <fieldset>
+                                <label>Item Name</label>
+                                <p>Item Name</p>
+                            </fieldset>
+                        </div>
+                        <div class="col-xs-6">
+                        <fieldset>
+                            <label>Item Name</label>
+                            <p>Item Name</p>
+                         </fieldset>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            
+            <div class="panel panel-info ">
+                <div class="panel-heading"> <h4><b>General Information</b></h4></div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6">
+                            <fieldset>
+                                <label>Were the food products good to you?</label>
+                            </fieldset>
+                        </div>
+                        <div class="col-sm-6 col-xs-6">
+                        <fieldset>
+                             <input type="radio" id="yes" name="objective" value="yes" required>
+                            <label for="yes">Yes</label>
+                            <input type="radio" id="no" name="objective"value="false">
+                            <label for="no">No</label>
+                         </fieldset>
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+              </div>
+            
+             <div class="panel panel-info">
+                <div class="panel-heading"> <h4><b>Service</b></h4></div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            
+                                <label>The quality of the product</label>
+                           
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                       
+                            <!-- <input type=radio name="trainer_kt" /><label class="padding"> 5</label>
+                             <input type=radio name="trainer_kt" /><label class="padding"> 4</label> 
+                             <input type=radio name="trainer_kt"/><label class="padding">3</label> 
+                             <input type=radio name="trainer_kt" /><label class="padding">2</label>  
+                             <input type=radio name="trainer_kt" /><label class="padding">1</label> -->
+                            
+                            <fieldset>
+                                <input type="radio" id="trainer_kt1" name="trainer_kt" value="1" required> <label for="trainer_kt1">1</label>
+                                <input type="radio" id="trainer_kt2" name="trainer_kt" value="2"> <label for="trainer_kt2">2</label>
+                                <input type="radio" id="trainer_kt3" name="trainer_kt" value="3"> <label for="trainer_kt3">3</label>
+                                <input type="radio" id="trainer_kt4" name="trainer_kt" value="4"> <label for="trainer_kt4">4</label>
+                                <input type="radio" id="trainer_kt5" name="trainer_kt" value="5"> <label for="trainer_kt5">5</label>
+                           </fieldset>
+                         
+                        </div>
+                        
+                        
+                    </div>
+                     <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                                <label>The usage of product</label>
+                        </div>
+                         <div class="col-sm-6 col-xs-12">
+                       
+                              <fieldset>
+                                <input type="radio" id="trainer_ex1" name="trainer_ex" value="1" required> <label for="trainer_ex1">1</label>
+                                <input type="radio" id="trainer_ex2" name="trainer_ex" value="2"> <label for="trainer_ex2">2</label>
+                                <input type="radio" id="trainer_ex3" name="trainer_ex" value="3"> <label for="trainer_ex3">3</label>
+                                <input type="radio" id="trainer_ex4" name="trainer_ex" value="4"> <label for="trainer_ex4">4</label>
+                                <input type="radio" id="trainer_ex5" name="trainer_ex" value="5"> <label for="trainer_ex5">5</label>
+                           </fieldset>
+                         
+                         
+                        </div>
+                    </div>
+                   
+                </div>
+              </div>
+            
+            <div class="panel panel-info">
+                <div class="panel-heading"> <h4><b>Shipping [if applicable]</b></h4></div>
+                <div class="panel-body">
+                    
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                                <label>Executive call</label>
+                            
+                        </div>
+                         <div class="col-sm-6 col-xs-12">
+                             <fieldset>
+                                <input type="radio" id="course_mt1" name="course_mt" value="1" required> <label for="course_mt1">1</label>
+                                <input type="radio" id="course_mt2" name="course_mt" value="2"> <label for="course_mt2">2</label>
+                                <input type="radio" id="course_mt3" name="course_mt" value="3"> <label for="course_mt3">3</label>
+                                <input type="radio" id="course_mt4" name="course_mt" value="4"> <label for="course_mt4">4</label>
+                                <input type="radio" id="course_mt5" name="course_mt" value="5"> <label for="course_mt5">5</label>
+                           </fieldset>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                                <label>Website Rating</label>
+                            
+                        </div>
+                         <div class="col-sm-6 col-xs-12">
+                       
+                            <fieldset>
+                                <input type="radio" id="course_ex1" name="course_ex" value="1" required> <label for="course_ex1">1</label>
+                                <input type="radio" id="course_ex2" name="course_ex" value="2"> <label for="course_ex2">2</label>
+                                <input type="radio" id="course_ex3" name="course_ex" value="3"> <label for="course_ex3">3</label>
+                                <input type="radio" id="course_ex4" name="course_ex" value="4"> <label for="course_ex4">4</label>
+                                <input type="radio" id="course_ex5" name="course_ex" value="5"> <label for="course_ex5">5</label>
+                           </fieldset>
+                         
+                        </div>
+                    </div>
+                </div>
+              </div>
+            
+           <div class="panel panel-info">
+                <div class="panel-heading"> <h4><b>Facilities</b></h4></div>
+                <div class="panel-body">
+                     <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                                <label>The details of product</label>
+                            
+                        </div>
+                         <div class="col-sm-6 col-xs-12">
+                       
+                             <fieldset>
+                                <input type="radio" id="training_fc1" name="training_fc" value="1" required> <label for="training_fc1">1</label>
+                                <input type="radio" id="training_fc2" name="training_fc" value="2"> <label for="training_fc2">2</label>
+                                <input type="radio" id="training_fc3" name="training_fc" value="3"> <label for="training_fc3">3</label>
+                                <input type="radio" id="training_fc4" name="training_fc" value="4"> <label for="training_fc4">4</label>
+                                <input type="radio" id="training_fc5" name="training_fc" value="5"> <label for="training_fc5">5</label>
+                           </fieldset>
+                         
+                        </div>
+                    </div>
+                </div>
+              </div>
+            
+             <div class="panel panel-info">
+                <div class="panel-heading"> <h4><b>Summary</b></h4></div>
+                <div class="panel-body">
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                                <label>Overall rating of this program</label>
+                            
+                        </div>
+                         <div class="col-sm-6 col-xs-12">
+                       
+                            <fieldset>
+                                <input type="radio" id="overall_rating1" name="overall_rating" value="1" required> <label for="overall_rating1">1</label>
+                                <input type="radio" id="overall_rating2" name="overall_rating" value="2"> <label for="overall_rating2">2</label>
+                                <input type="radio" id="overall_rating3" name="overall_rating" value="3"> <label for="overall_rating3">3</label>
+                                <input type="radio" id="overall_rating4" name="overall_rating" value="4"> <label for="overall_rating4">4</label>
+                                <input type="radio" id="overall_rating5" name="overall_rating" value="5"> <label for="overall_rating5">5</label>
+                           </fieldset>
+                         
+                        </div>
+                    </div>
+                </div>
+              </div>
+            
+                
+               <section>
+                   <fieldset style="text-align:center;">
+                        <input type="submit" name="Submit" value="Submit" class="btn btn-info"/>
+                   </fieldset>
+                </section>
+           
+
+  		</form>
+        
+    </div>    
+</div>
+<br>
+    
+    
+     <div class="container container-if-fixed-header container-if-fixed-footer">
+       <!--BODY content here-->
+       <div class="navbar navbar-default navbar-fixed-bottom navBg">
+           <div class="container text-center">
+           		<p></p>
+              <p class="white">Copyright &copy; madhav 2016</p>
+           </div>
+        </div>
+ </div>
+</body>
+</html>
